@@ -32,6 +32,18 @@ class _HomePageState extends State<HomePage> {
         _searchQuery = _searchController.text.toLowerCase();
       });
     });
+
+
+     // Call the TTS welcome message here
+    _welcomeMessage();
+  }
+
+
+    // Function to read out loud the welcome message
+  Future<void> _welcomeMessage() async {
+    await _flutterTts.setLanguage("en-US"); // Set the language
+    await _flutterTts.setSpeechRate(0.5); // Adjust the speech rate (optional)
+    await _flutterTts.speak("Hi, welcome to video call"); // Speak the welcome message
   }
 
   @override
@@ -46,6 +58,7 @@ class _HomePageState extends State<HomePage> {
     await _flutterTts.setSpeechRate(0.5); // Adjust the speech rate (optional)
     await _flutterTts.speak(name); // Speak the contact name
   }
+  
 
   // Function to create and open the PDF
   Future<void> generateAndViewPDF(List<QueryDocumentSnapshot> contacts) async {
