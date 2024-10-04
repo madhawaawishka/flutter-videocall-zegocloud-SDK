@@ -175,7 +175,7 @@ class _HomePageState extends State<HomePage> {
    Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Video Call Manager', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+        title: const Text('Video Calls', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.lightBlue,
         centerTitle: true,
         actions: [
