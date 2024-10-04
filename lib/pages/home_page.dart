@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
   Future<void> _welcomeMessage() async {
     await _flutterTts.setLanguage("en-US"); // Set the language
     await _flutterTts.setSpeechRate(0.5); // Adjust the speech rate (optional)
-    await _flutterTts.speak("Hi, welcome to video call"); // Speak the welcome message
+    await _flutterTts.speak("Hi, welcome to video call Screen"); // Speak the welcome message
   }
 
   @override
